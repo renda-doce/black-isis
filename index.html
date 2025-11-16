@@ -33,6 +33,7 @@
             },
         }
     </script>
+    <link rel="stylesheet" href="./css/botao-whatsapp.css" />
     <style>
         .material-symbols-outlined {
             font-variation-settings:
@@ -52,15 +53,53 @@
             min-height: max(884px, 100dvh);
         }
     </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3083279291833759');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=3083279291833759&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+
+
+
+<!-- Botão flutuante + texto de dica -->
+  <div id="whatsapp-float"
+    class="fixed bottom-5 right-5 flex items-center gap-2 transition-opacity duration-700 z-[9999]">
+    <div id="whatsapp-hint"
+      class="bg-white text-gray-800 text-sm px-3 py-2 rounded-xl shadow-md max-w-[200px] md:hidden text-right">
+      Se não conseguir entrar no grupo, fale conosco ▶
+    </div>
+
+    <a id="whatsapp-btn" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"
+      class="link-direto flex items-center justify-center w-14 h-14 bg-[#42f09a] rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
+      <img src="./img/whatsapp.svg" alt="WhatsApp" width="34" height="34">
+    </a>
+  </div>
+
+
     <div class="relative w-full flex-col group/design-root overflow-x-hidden">
         <header class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-50">
             <div class="flex size-12 shrink-0 items-center justify-start">
                 <span class="material-symbols-outlined text-gray-900 dark:text-white">chef_hat</span>
             </div>
-            <h2
+            <h2 style="color: #ff2b5e"
                 class="font-heading text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">
                 BLACK ÍSIS</h2>
             <div class="flex w-12 items-center justify-end">
@@ -83,60 +122,65 @@
                             </h1>
                             <h2
                                 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                                Este ano, você terá acesso a algo que nunca esteve ao alcance… e que pode mudar sua confeitaria para sempre.</h2>
+                                Este ano, você terá acesso a algo que nunca esteve ao alcance… e que pode mudar sua
+                                confeitaria para sempre.</h2>
                         </div>
-                        <button
-                            class="w-full flex min-w-[84px] max-w-[360px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto shadow-lg shadow-primary/30 mt-4 text-lg uppercase">
+                        <a id="botao-inscricao" 
+                            class="link-group w-full flex min-w-[84px] max-w-[360px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto shadow-lg shadow-primary/30 mt-4 text-lg uppercase">
                             <span class="truncate">Inscreva-se Agora!</span>
-                        </button>
+                    </a>
                     </div>
                 </div>
             </div>
-            
-            
-            <div class="flex gap-4 py-6 px-4 -mt-20 relative z-10">
+
+
+            <div id="contador" class="flex gap-4 py-6 px-4 -mt-14 relative z-10">
                 <div class="flex grow basis-0 flex-col items-stretch gap-2">
                     <div
                         class="flex h-16 grow items-center justify-center rounded bg-background-light dark:bg-background-dark shadow-lg">
-                        <p id="contador-dias"
+                        <p id="contador-dias" style="color: #ff2b5e"
                             class="font-heading text-gray-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">
                             12</p>
                     </div>
                     <div class="flex items-center justify-center">
-                        <p class="text-gray-700 dark:text-gray-300 text-xs font-normal leading-normal">Dias</p>
+                        <p class="text-gray-700 dark:text-gray-300 text-xs font-normal leading-normal"
+                            style="color: #ff2b5e">Dias</p>
                     </div>
                 </div>
                 <div class="flex grow basis-0 flex-col items-stretch gap-2">
                     <div
                         class="flex h-16 grow items-center justify-center rounded bg-background-light dark:bg-background-dark shadow-lg">
-                        <p id="contador-horas"
+                        <p id="contador-horas" style="color: #ff2b5e"
                             class="font-heading text-gray-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">
                             18</p>
                     </div>
                     <div class="flex items-center justify-center">
-                        <p class="text-gray-700 dark:text-gray-300 text-xs font-normal leading-normal">Horas</p>
+                        <p class="text-gray-700 dark:text-gray-300 text-xs font-normal leading-normal"
+                            style="color: #ff2b5e">Horas</p>
                     </div>
                 </div>
                 <div class="flex grow basis-0 flex-col items-stretch gap-2">
                     <div
                         class="flex h-16 grow items-center justify-center rounded bg-background-light dark:bg-background-dark shadow-lg">
-                        <p id="contador-minutos"
+                        <p id="contador-minutos" style="color: #ff2b5e"
                             class="font-heading text-gray-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">
                             45</p>
                     </div>
                     <div class="flex items-center justify-center">
-                        <p class="text-gray-700 dark:text-gray-300 text-xs font-normal leading-normal">Minutos</p>
+                        <p class="text-gray-700 dark:text-gray-300 text-xs font-normal leading-normal"
+                            style="color: #ff2b5e">Minutos</p>
                     </div>
                 </div>
                 <div class="flex grow basis-0 flex-col items-stretch gap-2">
                     <div
                         class="flex h-16 grow items-center justify-center rounded bg-background-light dark:bg-background-dark shadow-lg">
-                        <p id="contador-segundos"
+                        <p id="contador-segundos" style="color: #ff2b5e"
                             class="font-heading text-gray-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">
                             33</p>
                     </div>
                     <div class="flex items-center justify-center">
-                        <p class="text-gray-700 dark:text-gray-300 text-xs font-normal leading-normal">Segundos</p>
+                        <p class="text-gray-700 dark:text-gray-300 text-xs font-normal leading-normal"
+                            style="color: #ff2b5e">Segundos</p>
                     </div>
                 </div>
             </div>
@@ -144,7 +188,9 @@
             <div class="px-4 pt-10 pb-6">
                 <p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal text-center">A Black
                     Friday da chef Ísis Alvarez está chegando... 🖤🏃🏼‍♀️ 🔐</p>
-                <p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal text-center mt-2">Este ano, você terá acesso a algo que nunca esteve ao alcance… e que pode mudar sua carreira na confeitaria para sempre.
+                <p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal text-center mt-2">Este
+                    ano, você terá acesso a algo que nunca esteve ao alcance… e que pode mudar sua carreira na
+                    confeitaria para sempre.
                 </p>
             </div>
 
@@ -163,7 +209,8 @@
                     <div>
                         <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white uppercase">Oferta nunca
                             feita antes</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">Durante a aula, a Ísis vai abrir as inscrições promocionais para a Black Friday desse ano. 🎉</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Durante a aula, a Ísis vai abrir as
+                            inscrições promocionais para a Black Friday desse ano. 🎉</p>
                     </div>
                 </div>
                 <div class="bg-gray-200/50 dark:bg-white/5 p-6 rounded-lg flex items-start gap-4">
@@ -171,13 +218,15 @@
                     <div>
                         <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white uppercase">Bônus
                             exclusivos</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">Nessa Black, vocês terão bônus exclusivos (que a Ísis não entregou em lugar nenhum ainda) e ainda poderão participar de um sorteio inédito (e surreal de tão bom!!) - Vocês não vão acreditar quando revelarmos. 🥰🩷</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Nessa Black, vocês terão bônus exclusivos
+                            (que a Ísis não entregou em lugar nenhum ainda) e ainda poderão participar de um sorteio
+                            inédito (e surreal de tão bom!!) - Vocês não vão acreditar quando revelarmos. 🥰🩷</p>
                     </div>
                 </div>
             </section>
             <div class="px-4 pt-8">
             </div>
-<div id="carrossel" class="pt-4">
+            <div id="carrossel" class="pt-4">
                 <div
                     class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
                     <div class="flex items-stretch px-4 gap-4">
@@ -217,7 +266,7 @@
                                     a muito mais</p>
                             </div>
                         </div>
-                                                <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
                             <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
                                 data-alt="A collection of various delicious-looking pastries on a platter."
                                 style='background-image: url("./img/bolos-retangulares.jpeg");'></div>
@@ -246,42 +295,64 @@
                     que nossas alunas dizem</h3>
                 <div class="bg-gray-200/50 dark:bg-white/5 p-6 rounded-lg flex flex-col items-center text-center gap-4">
                     <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
-                    <p class="text-gray-600 dark:text-gray-300 italic">"Eu fiquei encantada com essa técnica e a possibilidade de aprender
-                            mais um sucesso com a prof ísis obrigada ❤️"</p>
+                    <p class="text-gray-600 dark:text-gray-300 italic">"Eu fiquei encantada com essa técnica e a
+                        possibilidade de aprender
+                        mais um sucesso com a prof ísis obrigada ❤️"</p>
                     <div class="font-heading font-bold text-gray-900 dark:text-white uppercase">Nara Lima</div>
                 </div>
                 <span class="block h-4"></span>
                 <div class="bg-gray-200/50 dark:bg-white/5 p-6 rounded-lg flex flex-col items-center text-center gap-4">
                     <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
-                    <p class="text-gray-600 dark:text-gray-300 italic">"Deus continue te abençoando todos os dias da sua vida, não dá pra fugir, vc conquista com a
-                            sua simplicidade.
-                            Faço cursos com outros profissionais, <strong>mas você é diferenciada</strong>"</p>
-                    <div class="font-heading font-bold text-gray-900 dark:text-white uppercase">Leda Santos da Silva</div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">"Deus continue te abençoando todos os dias da sua
+                        vida, não dá pra fugir, vc conquista com a
+                        sua simplicidade.
+                        Faço cursos com outros profissionais, <strong>mas você é diferenciada</strong>"</p>
+                    <div class="font-heading font-bold text-gray-900 dark:text-white uppercase">Leda Santos da Silva
+                    </div>
                 </div>
                 <span class="block h-4"></span>
                 <div class="bg-gray-200/50 dark:bg-white/5 p-6 rounded-lg flex flex-col items-center text-center gap-4">
                     <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
-                    <p class="text-gray-600 dark:text-gray-300 italic">"Bom dia agora que consegui assistir a aula que maravilha, confesso que esses
-                            doces vai ser
-                            uma revolução, quero aprender todos que Deus abençoe sempre sua vida, seu trabalho, só
-                            gratidão 🙏🏻💖"</p>
+                    <p class="text-gray-600 dark:text-gray-300 italic">"Bom dia agora que consegui assistir a aula que
+                        maravilha, confesso que esses
+                        doces vai ser
+                        uma revolução, quero aprender todos que Deus abençoe sempre sua vida, seu trabalho, só
+                        gratidão 🙏🏻💖"</p>
                     <div class="font-heading font-bold text-gray-900 dark:text-white uppercase">Anizia Farias</div>
                 </div>
             </section>
         </main>
-        <footer
+        <div
             class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 mt-8 border-t border-gray-200 dark:border-white/10">
             <div class="text-center mb-3">
                 <p class="font-bold text-gray-900 dark:text-white">A Black Ísis vai acontecer no dia 24 de novembro, às
                     09:00 da manhã.</p>
             </div>
-            <button
-                class="btn-grupo w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto text-lg uppercase">
-                <span class="px-4">Garantir meu lugar e ser avisada</span>
-            </button>
+            <a id="botao-garantir-lugar"
+                class="link-group w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto text-lg uppercase">
+                <span class="px-4">Garantir meu lugar</span>
+            </a>
+        </div>
+        <div class="link-politica-privacidade mx-6 text-center muted">
+            <a href="#politica-privacidade">clique aqui para ler nossa Política de Privacidade</a>
+        </div>
+
+        <div class="hidden text-sm muted text-justify p-6" id="politica-privacidade">
+            Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook,
+            a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e
+            mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer
+            informação para terceiros. Jamais fazemos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à
+            vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 ás
+            19h00. Lemos e respondemos todas as mensagens por ordem de chegada.<br>
+            <span class="link-politica-privacidade"><strong>Fechar</strong></span>
+        </div>
+        <footer class="max-w-6xl mx-auto px-6 py-10 muted text-sm text-center"><br> • © <span id="year"></span> Renda
+            Doce •
         </footer>
+        <div class="mb-9"></div>
     </div>
     <script src="./js/contador.js"></script>
+    <script src="./js/links-whatsapp.js"></script>
 </body>
 
 </html>

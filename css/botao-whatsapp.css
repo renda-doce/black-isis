@@ -1,0 +1,86 @@
+/* Estilos para o botão flutuante do WhatsApp */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Botão circular */
+.whatsapp-float a {
+  background-color: #42f09a;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+.whatsapp-float a:hover {
+  transform: scale(1.1);
+}
+
+/* Texto dica */
+#whatsapp-hint {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  max-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* evita cliques durante o fade */
+  animation:
+    fadeIn 0.6s ease 5s forwards,
+    fadeOut 0.7s ease 12s forwards;
+}
+
+/* --- BOTÃO --- */
+#whatsapp-btn {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeIn 0.6s ease 5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* 
+@keyframes aparecerBotao {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
