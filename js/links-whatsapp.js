@@ -11,29 +11,29 @@ document.querySelectorAll('.link-group').forEach(a => {
   a.setAttribute("target", "_blank");
   a.setAttribute("rel", "noopener noreferrer");
 
-  // Listener do evento
-  a.addEventListener("click", function () {
-    // Evita duplicação de evento
-    if (!this.dataset.pixelSent) {
+  // // Listener do evento
+  // a.addEventListener("click", function () {
+  //   // Evita duplicação de evento
+  //   if (!this.dataset.pixelSent) {
 
-      // Monta descrição segura e padronizada
-      const botao_id = this.id ? this.id : 'sem-id';
+  //     // Monta descrição segura e padronizada
+  //     const botao_id = this.id ? this.id : 'sem-id';
 
-      fbq('track', 'Lead', {
-        event_id: `lead_${Date.now()}`,
-        event_time: Math.floor(Date.now() / 1000),
-        content_name: `Lead - Black Ísis`,
-        content_id: botao_id,
-        value: 0.00,
-        currency: 'BRL',
-        event_source_url: window.location.href,
-      });
+  //     fbq('track', 'Lead', {
+  //       event_id: `lead_${Date.now()}`,
+  //       event_time: Math.floor(Date.now() / 1000),
+  //       content_name: `Lead - Black Ísis`,
+  //       content_id: botao_id,
+  //       value: 0.00,
+  //       currency: 'BRL',
+  //       event_source_url: window.location.href,
+  //     });
 
-      this.dataset.pixelSent = "true";
-      console.log("✅ Evento Meta Pixel 'Lead' enviado com sucesso.");
+  //     this.dataset.pixelSent = "true";
+  //     console.log("✅ Evento Meta Pixel 'Lead' enviado com sucesso.");
 
-    }
-  });
+  //   }
+  // });
 });
 
 

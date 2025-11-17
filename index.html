@@ -59,7 +59,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -79,19 +79,19 @@
 
 
 
-<!-- Botão flutuante + texto de dica -->
-  <div id="whatsapp-float"
-    class="fixed bottom-5 right-5 flex items-center gap-2 transition-opacity duration-700 z-[9999]">
-    <div id="whatsapp-hint"
-      class="bg-white text-gray-800 text-sm px-3 py-2 rounded-xl shadow-md max-w-[200px] md:hidden text-right">
-      Se não conseguir entrar no grupo, fale conosco ▶
-    </div>
+    <!-- Botão flutuante + texto de dica -->
+    <div id="whatsapp-float"
+        class="fixed bottom-5 right-5 flex items-center gap-2 transition-opacity duration-700 z-[9999]">
+        <div id="whatsapp-hint"
+            class="bg-white text-gray-800 text-sm px-3 py-2 rounded-xl shadow-md max-w-[200px] md:hidden text-right">
+            Se não conseguir entrar no grupo, fale conosco ▶
+        </div>
 
-    <a id="whatsapp-btn" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"
-      class="link-direto flex items-center justify-center w-14 h-14 bg-[#42f09a] rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
-      <img src="./img/whatsapp.svg" alt="WhatsApp" width="34" height="34">
-    </a>
-  </div>
+        <a id="whatsapp-btn" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"
+            class="link-direto flex items-center justify-center w-14 h-14 bg-[#42f09a] rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
+            <img src="./img/whatsapp.svg" alt="WhatsApp" width="34" height="34">
+        </a>
+    </div>
 
 
     <div class="relative w-full flex-col group/design-root overflow-x-hidden">
@@ -122,13 +122,13 @@
                             </h1>
                             <h2
                                 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                                Este ano, você terá acesso a algo que nunca esteve ao alcance… e que pode mudar sua
+                                Este ano, você terá acesso a algo Inédito e que pode mudar sua carreira na
                                 confeitaria para sempre.</h2>
                         </div>
-                        <a id="botao-inscricao" 
+                        <a id="botao-inscricao"
                             class="link-group w-full flex min-w-[84px] max-w-[360px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto shadow-lg shadow-primary/30 mt-4 text-lg uppercase">
                             <span class="truncate">Inscreva-se Agora!</span>
-                    </a>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -188,9 +188,7 @@
             <div class="px-4 pt-10 pb-6">
                 <p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal text-center">A Black
                     Friday da chef Ísis Alvarez está chegando... 🖤🏃🏼‍♀️ 🔐</p>
-                <p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal text-center mt-2">Este
-                    ano, você terá acesso a algo que nunca esteve ao alcance… e que pode mudar sua carreira na
-                    confeitaria para sempre.
+                <p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal text-center mt-2">
                 </p>
             </div>
 
@@ -226,61 +224,229 @@
             </section>
             <div class="px-4 pt-8">
             </div>
+
+
+
+            <!-- INÍCIO CARROSSEL -->
             <div id="carrossel" class="pt-4">
                 <div
                     class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
                     <div class="flex items-stretch px-4 gap-4">
+
+
                         <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
                             <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
                                 data-alt="A close-up shot of colorful macarons arranged neatly."
-                                style='background-image: url("./img/bolos-retangulares.jpeg");'></div>
+                                style='background-image: url("./img/cursos/bolos-retangulares.jpeg");'></div>
                             <div>
                                 <p
-                                    class="font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
-                                    Domine a Arte</p>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Criações
-                                    incríveis te esperam</p>
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Bolos Retangulares</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
                             </div>
                         </div>
+
+
                         <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
                             <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
                                 data-alt="A person decorating a cupcake with icing in a baking class."
-                                style='background-image: url("./img/vulcao.jpeg");'></div>
+                                style='background-image: url("./img/cursos/bolos-vulcão.jpeg");'></div>
                             <div>
                                 <p
-                                    class="font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
-                                    Aprenda na Prática</p>
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Bolos Vulcão</p>
                                 <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
-                                    Orientação a cada passo</p>
+                                </p>
                             </div>
                         </div>
+
+
                         <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
                             <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
                                 data-alt="A collection of various delicious-looking pastries on a platter."
-                                style='background-image: url("./img/bolos-retangulares.jpeg");'></div>
+                                style='background-image: url("./img/cursos/bolos-gelados.jpeg");'></div>
                             <div>
                                 <p
-                                    class="font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
-                                    Crie Delícias</p>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">De doces
-                                    a muito mais</p>
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Bolos Gelados</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
                             </div>
                         </div>
+
+
                         <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
                             <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
                                 data-alt="A collection of various delicious-looking pastries on a platter."
-                                style='background-image: url("./img/bolos-retangulares.jpeg");'></div>
+                                style='background-image: url("./img/cursos/bolos-de-vitrine.jpeg");'></div>
                             <div>
                                 <p
-                                    class="font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
-                                    Crie Delícias</p>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">De doces
-                                    a muito mais</p>
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Bolos de Vitrine</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/bolos-de-festa-especial-chocolate.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Bolos de Festa Especial Chocolate</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/bolos-caseiros.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Bolos Caseiros</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/bicos-de-confeitar.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Bicos de Confeitar</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/brigadeiros-sem-segredos.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Brigadeiros Sem Segredos </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/fabrica-de-bolos-no-pote.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Fábrica de Bolos no Pote </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/frutas-na-confeitaria-moderna.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Frutas na Confeitaria Moderna </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/panetones.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Panetones </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/pascoa.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Confeitaria de Páscoa </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/recheios-estruturados.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Recheios Estruturados </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/slice-cake.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Slice Cake </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/tortas-no-palito.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Tortas no Palito </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-[240px]">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded"
+                                data-alt="A collection of various delicious-looking pastries on a platter."
+                                style='background-image: url("./img/cursos/brigadeiros-sem-segredos-2.jpeg");'>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-center font-heading text-gray-900 dark:text-white text-base font-medium leading-normal uppercase">
+                                    Brigadeiros Sem Segredos </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- FIM CARROSSEL -->
             <section class="p-4 pt-10">
                 <div
                     class="bg-primary/20 dark:bg-primary/30 p-8 rounded-lg text-center flex flex-col items-center gap-4">
@@ -353,6 +519,7 @@
     </div>
     <script src="./js/contador.js"></script>
     <script src="./js/links-whatsapp.js"></script>
+    <script src="./js/pixel-tracker.js"></script>
 </body>
 
 </html>

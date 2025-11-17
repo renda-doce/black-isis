@@ -92,4 +92,28 @@ function getCookie(name) {
   return match ? match[2] : null;
 }
 
+async function getUserData() {
+    return {
+      client_user_agent: navigator.userAgent,
+      fbp: getCookie('_fbp'),
+      fbc: getCookie('_fbc')
+    };
+  }
 
+
+document.querySelectorAll('.link-group').forEach(a => {
+    a.addEventListener("click", async function () {
+        if (!this.dataset.pixelSent) {
+            const userData = await getUserData();
+
+            const botao_id = this.id ? this.id : 'sem-id';
+            enviarEvento('Lead', userData, {
+                content_name: `Lead - Black Isis`,
+                content_id: botao_id,
+                value: 0.00,
+                currency: 'BRL'
+            },
+          );
+        }
+    });
+});
