@@ -1,10 +1,10 @@
 // ==========================
 // Configurações
 // ==========================
-const PIXEL_ID = '5d82a300-a335-474b-93f1-093bb154fb44';
+const PIXEL_ID = '03af56d0-f5c0-4455-bd34-7719b4b383c8';
 const API_URL = 'https://njsxezhedrldrfrowpml.supabase.co/functions/v1/meta-conversion';
 const TEST_EVENT_CODE = 'TEST73424';
-const FACEBOOK_PIXEL_ID = '3083279291833759';
+const FACEBOOK_PIXEL_ID = '324230336566459';
 
 
 // ==========================
@@ -32,7 +32,6 @@ async function enviarEvento(eventName, userData = {}, customData = { currency: '
       event_source_url: window.location.href,
       user_data: userData,
       custom_data: customData,
-      test_event_code: TEST_EVENT_CODE
     };
 
     // --- 4. Envia via API
